@@ -1,0 +1,148 @@
+#colorText {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: white;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,0.6),
+        0 0 15px rgba(255,255,255,0.1);
+}
+
+#mainArea{
+    display: flex;
+    gap:40px;
+    width:100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#boxesParent{
+    display: flex;
+    flex-direction: column;
+}
+
+#hsvBoxParent,
+#lhcBoxParent,
+#rgbBoxParent{
+    display:flex;
+    width:300px;
+    height:120px;
+    
+    max-width: 1000px;
+
+    overflow:hidden;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    border-radius:14px;
+
+    position: relative;
+}
+
+#rgbBoxParent::after{
+    content:"";
+    position:absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.05),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.colorBox{
+    flex:1;
+    height: 100%;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.colorBox:hover{
+    filter: brightness(1.1);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+#btn{
+    display: flex;
+    margin-right:auto;
+    margin-left:auto;
+    max-height: fit-content;
+    max-width: fit-content;
+    
+}
+
+#input2,
+#input1{
+    margin:10px auto;
+    display: block;
+}
+
+#sliderShit{
+    max-width: fit-content;
+    margin-inline:auto;
+}
+
+#sliderNum{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: fit-content;
+}
+
+#slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width:100%;
+    height:25px;
+    background:#c0c1d1;
+    outline:none;
+    opacity:0.7;
+    -webkit-transition: 0.2;
+    transition: opacity 0.2;
+}
+
+#slider:hover{
+    opacity:1;
+}
+
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width:25px;
+    height:25px;
+    background:black;
+    cursor:pointer;
+}
+
+#slider::-moz-range-thumb{
+    width:25px;
+    height:25px;
+    background:black;
+    cursor:pointer;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+        to right,
+        rgb(33,33,35) 0%,
+        rgb(33,33,35) 12%,
+        #6b6c7b 12%,
+        #6f7080 50%,
+        #6b6c7b 88%,
+        rgb(33,33,35) 88%
+    );
+}
+
+#content {
+    width: min(70%, 900px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="content">
+
+        <h1 id="colorText">Choose Colors</h1>
+        <div id="mainArea">
+
+            <div id="boxesParent">
+                <h3>RGB</h3>
+                <div id="rgbBoxParent"></div>
+                <h3>HSV</h3>
+                <div id="hsvBoxParent"></div>
+                <h3>LHC</h3>
+                <div id="lhcBoxParent"></div>
+            </div>
+
+        <div id="controls">
+                <div id="sliderShit">
+                    <h4 id="sliderNum">5</h4>
+                    <input type="range" min="2" max="13" value="5" id="slider">
+                <input id="input1" type="text" placeholder="#ffffff">
+                <input id="input2" type="text" placeholder="#000000">
+
+                <button id="btn" type="button" onclick="setupScreen()">MIX!</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="hex.js"></script>
+
+</body>
+</html>
