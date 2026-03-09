@@ -1,17 +1,18 @@
+//Inputs
 var text = document.getElementById("colorText");
 var inputField1 = document.getElementById("input1");
 var inputField2 = document.getElementById("input2");
 
+//The sliders
 var slider = document.getElementById("slider");
 var sliderNum = document.getElementById("sliderNum");
 var sliderCurrentVal = Number(sliderNum.innerHTML);
 
+//The boxes where Gradients are
 var rgbBoxParent = document.getElementById("rgbBoxParent");
 var hsvBoxParent = document.getElementById("hsvBoxParent");
-var box1 = document.getElementById("box1");
-var box2 = document.getElementById("box2");
-var box3 = document.getElementById("box3");
 
+//checkboxes for copying
 let hexCheck = document.getElementById("hexCheck");
 let rgbCheck = document.getElementById("rgbCheck");
 let hsvCheck = document.getElementById("hsvCheck");
